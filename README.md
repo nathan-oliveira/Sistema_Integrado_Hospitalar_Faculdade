@@ -41,7 +41,7 @@ npm run start:dev
 ```
 
 ## Front-end
-Pré-requisitos: npm / yarn
+📋 Pré-requisitos: npm / yarn
 
 ```bash
 # clonar repositório
@@ -62,6 +62,7 @@ npm run start
 * [Node.js](https://nodejs.org/en/) - é uma tecnologia usada para executar código JavaScript fora do navegador. Com ele podemos construir aplicações web em geral
 * [Nestjs](https://nestjs.com/) - é uma estrutura para a construção de aplicativos da web Node.js eficientes e escalonáveis.
 * [React.js](https://pt-br.reactjs.org/) - é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.
+* [Redux](https://redux-toolkit.js.org/) - é uma biblioteca JavaScript de código aberto para gerenciar o estado do aplicativo.
 * [Xampp](https://www.apachefriends.org/pt_br/index.html) - é um pacote com os principais servidores de código aberto do mercado, incluindo FTP, banco de dados MySQL e Apache com suporte as linguagens PHP e Perl.
 
 ## 📌 Versão
