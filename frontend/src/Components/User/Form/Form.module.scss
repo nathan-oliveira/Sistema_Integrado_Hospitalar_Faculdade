@@ -1,0 +1,21 @@
+.button__link {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 50% !important;
+  margin-top: 10px;
+}
+
+@media (max-width: 400px) {
+  .button__link {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 100% !important;
+  }
+}
+
+.button__link:hover{
+  text-decoration: none;
+  color: #4c60cf;
+}

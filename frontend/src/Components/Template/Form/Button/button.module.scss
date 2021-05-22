@@ -1,0 +1,27 @@
+.button {
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+  padding: .7rem;
+  background: #4E8FE6;
+  color: white;
+  min-width: 8rem;
+  box-sizing: border-box;
+  transition: .1s;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.button:disabled:hover {
+  transform: scale(1);
+}
+
+.button:hover {
+  transition: .1s;
+  background: #336bb4;
+  transform: scale(1.02);
+}

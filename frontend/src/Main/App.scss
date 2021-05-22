@@ -1,0 +1,323 @@
+@import url('../Assets/fonts/Nunito.css');
+@import url('../Assets/fonts/Spectral.css');
+
+:root {
+  --padding-global: 15px 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  background: url(../Assets/svg/pattern.svg) repeat top;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img {
+  display: block;
+}
+
+a, button {
+  text-decoration: none;
+  color: #333;
+}
+
+button,
+input,
+select {
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 0.9rem;
+  color: #333;
+  outline: none;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-areas:
+    "sidenav nav"
+    "sidenav content"
+    "sidenav footer"
+  ;
+}
+
+@media (max-width: 800px) {
+  .App {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "sidenav"
+      "content"
+      "footer"
+    ;
+  }
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.offscreen {
+  color: transparent !important;
+  transition: 1s;
+}
+
+.onscreen {
+  transition: 1s;
+}
+
+.animeTop {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: animePage .3s forwards;
+}
+
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animePage .3s forwards;
+}
+
+@keyframes animePage {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+.col__3 {
+  width: 23%;
+}
+
+.col__4 {
+  width: 31.5%;
+}
+
+.col__6 {
+  width: 49%;
+}
+
+.col__8 {
+  width: 69%;
+}
+
+.col__9 {
+  width: 79%;
+}
+
+.col__12 {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .col__3,
+  .col__4,
+  .col__6,
+  .col__8,
+  .col__9,
+  .col__12 {
+    width: 100%;
+  }
+}
+
+/* Table */
+.table__action {
+  width: 1%;
+  text-align: center !important;
+}
+
+.table__col1 {
+  display: none;
+}
+
+.table__col2 {
+  max-width: 20%;
+}
+
+td.table__col2 {
+  border-radius: 0 0 0 4px !important;
+}
+
+th.table__col2 {
+  border-radius: 4px 0 0 0;
+}
+
+.table__col3 {
+  width: 25%;
+}
+
+.table__col4 {
+  width: 16%;
+}
+
+// @media (min-width: 1700px) {
+//   .table__action {
+//     width: 7%;
+//   }
+// }
+
+// @media (max-width: 1443px) {
+//   .table__action {
+//     width: 16%;
+//   }
+// }
+
+@media (max-width: 1114px) {
+  // .table__action {
+  //   width: 17%;
+  // }
+
+  .table__col2 {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .table__col5 {
+    display: none;
+  }
+
+  // .table__action {
+  //   width: 20%;
+  // }
+}
+
+@media (max-width: 599px) {
+  // .table__action {
+  //   width: 25%;
+  // }
+
+  .table__col4 {
+    display: none;
+  }
+}
+
+@media (max-width: 393px) {
+  // .table__action {
+  //   width: 30%;
+  // }
+}
+
+@media (max-width: 341px) {
+  // .table__action {
+  //   width: 39%;
+  // }
+}
+
+.empty__table {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+  .title__empty__table {
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s;
+    color: #65d;
+    font-size: 30px;
+    margin-bottom: 1%;
+    transition: 0.5s;
+
+  }
+
+  a:hover,
+  .title__empty__table:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+
+  a {
+    padding: 5px 20px !important;
+    background: #65d;
+    color: white;
+    border-radius: 5px;
+    display: inline-flex;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .empty__table {
+    .title__empty__table {
+      font-size: 20px !important;
+    }
+  }
+}
+
+.row__reverse {
+  flex-direction: row-reverse !important;
+
+  button {
+    width: 100% !important;
+  }
+}
+
+.VictoryContainer {
+  touch-action: auto !important;
+}
+
+.details__modal__overlay {
+  transition: opacity 0.2s ease-out;
+  pointer-events: none;
+  background: rgba(#0f172a, 0.3);
+  position: fixed;
+  opacity: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  details[open] & {
+    pointer-events: all;
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+}
+
+details {
+  summary {
+    &:focus {
+      outline: none;
+    }
+    &:-webkit-details-marker {
+      display: none;
+    }
+
+    &:first-of-type {
+      list-style-type: none;
+    }
+  }
+}
+
+.row_reverse {
+  button {
+    width: 100% !important;
+  }
+}
+
+.bottom10 {
+  margin-bottom: 10px;
+}

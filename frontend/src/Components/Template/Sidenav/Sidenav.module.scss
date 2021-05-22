@@ -1,0 +1,25 @@
+.sidenav {
+  width: 255px;
+  grid-area: sidenav;
+  background: linear-gradient(180deg, #254e85 40%, #3d71b6);
+  transition: width 1s;
+  z-index: 1;
+}
+
+.sidenav__close {
+  width: 60px;
+  grid-area: sidenav;
+  background: linear-gradient(180deg, #254e85 40%, #3d71b6);
+  transition: width 1s;
+  z-index: 1;
+}
+
+.sidenav__content {
+  position: absolute;
+}
+
+@media (max-width: 800px) {
+  .sidenav {
+    display: none;
+  }
+}
